@@ -1,0 +1,11 @@
+{
+  "test_accuracy": 0.9568742452992928,
+  "test_precision": 0.9568652463053822,
+  "test_recall": 0.9568742452992928,
+  "test_f1_score": 0.9568668722563817,
+  "test_precision_macro": 0.9566137244255841,
+  "test_recall_macro": 0.9563015683184628,
+  "test_f1_macro": 0.956454719157652,
+  "test_roc_auc": 0.9898774290890191,
+  "test_avg_precision": 0.9905187290638804
+}
