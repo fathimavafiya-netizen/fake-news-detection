@@ -1,115 +1,188 @@
-# Fake News Detection using NLP
+# 📰 Fake News Detection System
 
-A machine learning project that detects fake news articles using Natural Language Processing techniques. Built with TF-IDF + Naive Bayes (baseline), LSTM, and BERT models.
+A complete end-to-end **Machine Learning + NLP project** that detects whether a news article is **Fake or Real** using text classification techniques.
 
-## Features
+---
 
-- **Multiple ML Models**: TF-IDF + Naive Bayes (95.7% accuracy), LSTM, DistilBERT
-- **Streamlit Web App**: Interactive UI to analyze news articles
-- **Explainability**: See which words contribute to the prediction
-- **Sentiment Analysis**: VADER-based sentiment scoring
-- **Bias Detection**: Political leaning detection (Left/Center/Right)
-- **Source Credibility**: Domain reputation scoring
-- **Admin Panel**: View prediction logs, manage models
+## 🚀 Project Overview
 
-## Project Structure
+This project builds a **Fake News Detection System** using:
+
+* Natural Language Processing (NLP)
+* Machine Learning (TF-IDF + Naive Bayes)
+* Interactive Web App using Streamlit
+
+The system takes a news article as input and predicts whether it is **Fake 🟥 or Real 🟩**.
+
+---
+
+## ✨ Features
+
+✔ Text preprocessing and cleaning
+✔ TF-IDF vectorization
+✔ Multinomial Naive Bayes model
+✔ Model evaluation (Accuracy, Precision, Recall, F1-score)
+✔ Interactive Streamlit web interface
+✔ Explainability dashboard (basic insights)
+
+---
+
+## 🧠 Model Performance
+
+* **Accuracy:** ~95.6%
+* **F1 Score:** ~95.6%
+* **ROC-AUC:** ~0.99
+
+👉 Strong performance on both validation and test datasets.
+
+---
+
+## 📂 Project Structure
 
 ```
 fake-news-detection/
+│
+├── app/                  # Streamlit web app
+│   └── app.py
+│
+├── src/                  # Core ML pipeline
+│   └── train_baseline.py
+│
+├── models/               # Saved models (ignored in Git)
+│
 ├── data/
-│   ├── raw/                    # Place Fake.csv + True.csv here
-│   └── processed/              # Auto-generated train/val/test splits
-├── src/
-│   ├── preprocessing.py        # Text cleaning (3 levels)
-│   ├── feature_engineering.py  # TF-IDF, tokenizers
-│   ├── train_baseline.py       # TF-IDF + Naive Bayes training
-│   ├── train_lstm.py           # LSTM with attention
-│   ├── train_bert.py           # DistilBERT fine-tuning
-│   ├── predict.py              # Unified prediction interface
-│   ├── evaluate.py             # Metrics and visualizations
-│   ├── sentiment.py            # VADER sentiment analysis
-│   └── explainability.py       # Model explanations
-├── models/                     # Trained model artifacts
-├── app/
-│   └── app.py                  # Streamlit application
-├── requirements.txt
-└── README.md
+│   ├── raw/              # Raw dataset (not included)
+│   └── processed/        # Processed data
+│
+├── requirements.txt      # Dependencies
+├── README.md             # Project documentation
+└── .gitignore
 ```
 
-## Installation
+---
 
-1. Clone the repository:
-```bash
+## 📊 Dataset
+
+This project uses the **Fake and Real News Dataset**:
+
+* Fake news articles
+* Real news articles
+
+📥 Download from:
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```
 git clone https://github.com/fathimavafiya-netizen/fake-news-detection.git
 cd fake-news-detection
 ```
 
-2. Install dependencies:
-```bash
+---
+
+### 2️⃣ Install Dependencies
+
+```
 pip install -r requirements.txt
 ```
 
-3. Download NLTK data:
-```python
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('vader_lexicon')
+---
+
+### 3️⃣ Add Dataset
+
+Create the following folder:
+
+```
+data/raw/
 ```
 
-## Dataset
+Place files inside:
 
-Download the **ISOT Fake News Dataset** from Kaggle:
-- [fake-and-real-news-dataset](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+```
+Fake.csv
+True.csv
+```
 
-Place `Fake.csv` and `True.csv` in `data/raw/`.
+---
 
-## Usage
+### 4️⃣ Train the Model
 
-### Train the baseline model:
-```bash
+```
 python -m src.train_baseline
 ```
 
-### Train LSTM model:
-```bash
-python -m src.train_lstm
-```
+---
 
-### Train BERT (recommended on Google Colab with GPU):
-```bash
-python -m src.train_bert
-```
+### 5️⃣ Run the Application
 
-### Launch the web app:
-```bash
+```
 streamlit run app/app.py
 ```
 
-Then open http://localhost:8501 in your browser.
+Then open:
 
-## Model Performance
+```
+http://localhost:8501
+```
 
-| Model | Accuracy | F1 Score | ROC-AUC |
-|-------|----------|----------|---------|
-| TF-IDF + Naive Bayes | 95.69% | 0.9569 | 0.9899 |
-| LSTM + Attention | ~93% | ~0.93 | ~0.97 |
-| DistilBERT | ~96% | ~0.96 | ~0.98 |
+---
 
-## Web App Pages
+## 🖥️ Application Preview
 
-1. **Prediction**: Paste text or upload .txt file to analyze
-2. **Model Performance**: View metrics, confusion matrix, ROC curves
-3. **Explainability Dashboard**: Word importance visualization
-4. **Admin Panel**: Prediction logs, model management (password: `admin123`)
+* Enter a news headline or article
+* Click **Predict**
+* Get output: **Fake or Real**
 
-## Tech Stack
+---
 
-- **ML/NLP**: scikit-learn, NLTK, TensorFlow, Transformers
-- **Web**: Streamlit
-- **Visualization**: Matplotlib, Seaborn, Plotly
+## 🧪 Technologies Used
 
-## License
+* Python 🐍
+* Pandas & NumPy
+* Scikit-learn
+* NLTK
+* Streamlit
+* Matplotlib & Seaborn
 
-MIT License
+---
+
+## 📈 Future Improvements
+
+* 🔹 Deep Learning models (LSTM / BERT)
+* 🔹 Real-time news API integration
+* 🔹 Better UI/UX design
+* 🔹 Deployment on cloud (AWS / Streamlit Cloud)
+
+---
+
+## 👩‍💻 Author
+
+**Fathima Vafiya**
+
+* Aspiring Data Analyst & Cloud Developer
+* Passionate about Machine Learning & Data Science
+
+---
+
+## ⭐ Acknowledgements
+
+* Kaggle dataset contributors
+* Open-source ML community
+
+---
+
+## 📌 Conclusion
+
+This project demonstrates a **complete ML workflow**:
+
+✔ Data Collection
+✔ Preprocessing
+✔ Model Training
+✔ Evaluation
+✔ Deployment
+
+👉 A strong **resume-ready project** showcasing real-world skills 🚀
