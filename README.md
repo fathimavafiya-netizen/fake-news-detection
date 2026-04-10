@@ -1,10 +1,10 @@
-# 📰 Fake News Detection System
+ Fake News Detection System
 
 A complete end-to-end **Machine Learning + NLP project** that detects whether a news article is **Fake or Real** using text classification techniques.
 
 ---
 
-## 🚀 Project Overview
+ Project Overview
 
 This project builds a **Fake News Detection System** using:
 
@@ -12,32 +12,32 @@ This project builds a **Fake News Detection System** using:
 * Machine Learning (TF-IDF + Naive Bayes)
 * Interactive Web App using Streamlit
 
-The system takes a news article as input and predicts whether it is **Fake 🟥 or Real 🟩**.
+The system takes a news article as input and predicts whether it is **Fake  or Real **.
 
 ---
 
-## ✨ Features
+Features
 
-✔ Text preprocessing and cleaning
-✔ TF-IDF vectorization
-✔ Multinomial Naive Bayes model
-✔ Model evaluation (Accuracy, Precision, Recall, F1-score)
-✔ Interactive Streamlit web interface
-✔ Explainability dashboard (basic insights)
+ Text preprocessing and cleaning
+ TF-IDF vectorization
+ Multinomial Naive Bayes model
+ Model evaluation (Accuracy, Precision, Recall, F1-score)
+ Interactive Streamlit web interface
+ Explainability dashboard (basic insights)
 
 ---
 
-## 🧠 Model Performance
+Model Performance
 
 * **Accuracy:** ~95.6%
 * **F1 Score:** ~95.6%
 * **ROC-AUC:** ~0.99
 
-👉 Strong performance on both validation and test datasets.
+Strong performance on both validation and test datasets.
 
 ---
 
-## 📂 Project Structure
+Project Structure
 
 ```
 fake-news-detection/
@@ -61,21 +61,21 @@ fake-news-detection/
 
 ---
 
-## 📊 Dataset
+Dataset
 
 This project uses the **Fake and Real News Dataset**:
 
 * Fake news articles
 * Real news articles
 
-📥 Download from:
+Download from:
 https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 
 ---
 
-## ⚙️ Installation & Setup
+Installation & Setup
 
-### 1️⃣ Clone the Repository
+Clone the Repository
 
 ```
 git clone https://github.com/fathimavafiya-netizen/fake-news-detection.git
@@ -84,7 +84,7 @@ cd fake-news-detection
 
 ---
 
-### 2️⃣ Install Dependencies
+Install Dependencies
 
 ```
 pip install -r requirements.txt
@@ -92,7 +92,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3️⃣ Add Dataset
+Add Dataset
 
 Create the following folder:
 
@@ -109,7 +109,7 @@ True.csv
 
 ---
 
-### 4️⃣ Train the Model
+Train the Model
 
 ```
 python -m src.train_baseline
@@ -117,7 +117,7 @@ python -m src.train_baseline
 
 ---
 
-### 5️⃣ Run the Application
+Run the Application
 
 ```
 streamlit run app/app.py
@@ -130,8 +130,7 @@ http://localhost:8501
 ```
 
 ---
-
-## 🖥️ Application Preview
+Application Preview
 
 * Enter a news headline or article
 * Click **Predict**
@@ -139,9 +138,9 @@ http://localhost:8501
 
 ---
 
-## 🧪 Technologies Used
+Technologies Used
 
-* Python 🐍
+* Python 
 * Pandas & NumPy
 * Scikit-learn
 * NLTK
@@ -150,7 +149,7 @@ http://localhost:8501
 
 ---
 
-## 📈 Future Improvements
+Future Improvements
 
 * 🔹 Deep Learning models (LSTM / BERT)
 * 🔹 Real-time news API integration
@@ -159,30 +158,21 @@ http://localhost:8501
 
 ---
 
-## 👩‍💻 Author
 
-**Fathima Vafiya**
-
-* Aspiring Data Analyst & Cloud Developer
-* Passionate about Machine Learning & Data Science
-
----
-
-## ⭐ Acknowledgements
+Acknowledgements
 
 * Kaggle dataset contributors
 * Open-source ML community
 
 ---
 
-## 📌 Conclusion
+Conclusion
 
 This project demonstrates a **complete ML workflow**:
 
-✔ Data Collection
-✔ Preprocessing
-✔ Model Training
-✔ Evaluation
-✔ Deployment
+Data Collection
+Preprocessing
+Model Training
+Evaluation
+Deployment
 
-👉 A strong **resume-ready project** showcasing real-world skills 🚀
